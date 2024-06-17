@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "d56a1a79-4161-4a58-9716-c68919dd796e",
+		"name": "SocialNetwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36354734"
+	},
+	"item": [
+		{
+			"name": "aniket signup/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aniket@email.com\",\r\n    \"password\": \"Aniket@9901\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "aniket login/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aniket@email.com\",\r\n    \"password\": \"Aniket@9901\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "user2 login/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"shreyasi@gmail.com\",\n    \"password\": \"Shreyasi@456\"\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "/friends",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YYIZuBjRQQ37T1L5h2zUlSITJqjOMT"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/friends"
+			},
+			"response": []
+		},
+		{
+			"name": "  friends search/?search=",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uAfuRrKIPTcKZvGpBIzQXdoGRRqHu0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/search/?search=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend-request/send/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YYIZuBjRQQ37T1L5h2zUlSITJqjOMT",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_user_id\" : \"2\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/friend-request/send/"
+			},
+			"response": []
+		},
+		{
+			"name": "friend-requests/pending/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YYIZuBjRQQ37T1L5h2zUlSITJqjOMT"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/friend-requests/pending/"
+			},
+			"response": []
+		},
+		{
+			"name": "friend-request/respond/1/accept/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YYIZuBjRQQ37T1L5h2zUlSITJqjOMT"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/friend-request/respond/1/accept/"
+			},
+			"response": []
+		},
+		{
+			"name": "token/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "aniket@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Aniket@9901",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "KEWS2E6qUiYmZE1PS7NBun08JZoVsDkxW65jUzyS",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "UAd4LvSzd9gcIQe5kZ0FqYCsSOED5HmodJeZhc74tKbWffamYVPO9FHgxTtVreu7jkV6xrbbPPoIY2o9J8o7eh9kxEtea0mOwsAnNOM3JkzTEqXuyFpsNl97n80OLTbx",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/o/token/"
+			},
+			"response": []
+		}
+	]
+}
